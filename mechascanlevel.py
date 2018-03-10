@@ -23,7 +23,6 @@ log = logging.getLogger(__name__)
 class MechascanLevelGUI(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(MechascanLevelGUI, self).__init__()
-        print ("gswgwgf")
         self.setupUi(self)
         self.show()
 
