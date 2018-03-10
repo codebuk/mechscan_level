@@ -1,13 +1,6 @@
 #!/usr/bin/env python3
-from PyQt5.QtCore import Qt, QDir, QRect, QTimer
-from PyQt5.QtGui import QImage, QPixmap, QTransform, QPainter
-from PyQt5.QtWidgets import (QApplication, QMainWindow, QGraphicsScene, QGraphicsView, QGraphicsPixmapItem,
-                             QMenu, QDialog, QFileDialog, QMessageBox, QFrame, QRubberBand, QLabel,
-                             QProgressBar)
-from PyQt5.QtPrintSupport import QPrinter, QPrintDialog
-from functools import partial
-import os
-from random import random
+from PyQt5.QtWidgets import (QMainWindow,
+                          )
 import preferences
 import logging
 # ui generated code
