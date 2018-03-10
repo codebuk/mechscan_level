@@ -61,7 +61,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "")
-        self.horizontalSlider_cam_y.setMaximum(4000)
+        self.horizontalSlider_cam_y.setMaximum(99)
         self.horizontalSlider_cam_y.setOrientation(QtCore.Qt.Horizontal)
         self.horizontalSlider_cam_y.setInvertedAppearance(False)
         self.horizontalSlider_cam_y.setTickPosition(QtWidgets.QSlider.TicksBothSides)
@@ -108,37 +108,21 @@ class Ui_MainWindow(object):
         self.horizontalSlider_cam_level_rear_x_low.setSizeIncrement(QtCore.QSize(0, 100))
         self.horizontalSlider_cam_level_rear_x_low.setBaseSize(QtCore.QSize(0, 100))
         self.horizontalSlider_cam_level_rear_x_low.setStyleSheet("QSlider::groove:horizontal {\n"
-"border: 2px solid #999999;\n"
-"height: 40px;\n"
-"border-radius: 2px;\n"
-"border-top-right-radius: 9px;\n"
-"border-bottom-right-radius: 9px;\n"
-"border-top-left-radius: 12px;\n"
-"border-bottom-left-radius: 0px;\n"
-"\n"
+"border: 1px solid #999999;\n"
 "}\n"
 "\n"
 "QSlider::handle:horizontal {\n"
-"width: 18px;\n"
-" background-image: url(:/slider-knob.png)\n"
-"\n"
+"border: 1px solid #009929;\n"
+"width:20px;\n"
+"background: red;\n"
 "}\n"
 "\n"
 "QSlider::add-page:qlineargradient {\n"
-"background: yellow;\n"
-"foreground: red;\n"
-"border-top-right-radius: 9px;\n"
-"border-bottom-right-radius: 9px;\n"
-"border-top-left-radius: 0px;\n"
-"border-bottom-left-radius: 0px;\n"
+"background: green;\n"
 "}\n"
 "\n"
 "QSlider::sub-page:qlineargradient {\n"
-"background: green;\n"
-"border-top-right-radius: 0px;\n"
-"border-bottom-right-radius: 0px;\n"
-"border-top-left-radius: 9px;\n"
-"border-bottom-left-radius: 9px;\n"
+"background: blue;\n"
 "}")
         self.horizontalSlider_cam_level_rear_x_low.setOrientation(QtCore.Qt.Horizontal)
         self.horizontalSlider_cam_level_rear_x_low.setTickPosition(QtWidgets.QSlider.TicksBothSides)
@@ -245,11 +229,14 @@ class Ui_MainWindow(object):
         self.horizontalSlider_cam_level_rear_x_high.valueChanged['int'].connect(self.spinBox_cam_level_rear_x_high.setValue)
         self.horizontalSlider_cam_level_rear_x_low.valueChanged['int'].connect(self.spinBox_cam_level_rear_x_low.setValue)
         self.horizontalSlider_cam_y.valueChanged['int'].connect(self.spinBox_cam_y.setValue)
+        self.spinBox_cam_y.valueChanged['int'].connect(self.horizontalSlider_cam_y.setValue)
+        self.spinBox_cam_level_rear_x_high.valueChanged['int'].connect(self.horizontalSlider_cam_level_rear_x_high.setValue)
+        self.spinBox_cam_level_rear_x_low.valueChanged['int'].connect(self.horizontalSlider_cam_level_rear_x_low.setValue)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "MechaScan Table"))
         self.groupBox.setTitle(_translate("MainWindow", "Camera Position"))
         self.groupBox_2.setTitle(_translate("MainWindow", "Rear Y"))
         self.groupBox_3.setTitle(_translate("MainWindow", "Rear X"))
