@@ -22,14 +22,11 @@ class MechascanLevelGUI(QMainWindow, Ui_MainWindow):
         #self.create_actions()
         #self.create_menu()
 
-        #self.setContextMenuPolicy(Qt.CustomContextMenu)
-        # noinspection PyUnresolvedReferences
-        #self.customContextMenuRequested.connect(self.show_menu)
         #self.read_prefs()
         self.resize(1000, 600)
 
 
-    # noinspection PyUnresolvedReferences
+
     #def create_actions(self):
     #    self.horizontalSlider_3.valueChanged.connect(self.sliderchanged)
 
